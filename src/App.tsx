@@ -6,23 +6,27 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Ghost, Eye, Skull, ChevronRight, ChevronLeft, Info, Share2, Download } from 'lucide-react';
+import banner1 from './assets/images/duskvald_banner_v1_1778137462923.png';
+import banner2 from './assets/images/duskvald_banner_v2_1778137484968.png';
+import banner3 from './assets/images/duskvald_banner_v3_1778137507564.png';
+import logo1 from './assets/images/duskvald_logo_v1_1778137857042.png';
 
 const BANNERS = [
   {
     id: 1,
-    url: '/src/assets/images/duskvald_banner_v1_1778137462923.png',
+    url: banner1,
     title: 'The Corridor',
     description: 'Atmospheric faceless entity in a hospital hallway.'
   },
   {
     id: 2,
-    url: '/src/assets/images/duskvald_banner_v2_1778137484968.png',
+    url: banner2,
     title: 'The Observer',
     description: 'Masked figure watching from an open doorway.'
   },
   {
     id: 3,
-    url: '/src/assets/images/duskvald_banner_v3_1778137507564.png',
+    url: banner3,
     title: 'The Woods',
     description: 'Silhouettes in a digital fog.'
   }
@@ -43,9 +47,9 @@ export default function App() {
       <nav className="fixed top-0 w-full z-40 border-b border-horror-border/50 bg-horror-bg/80 backdrop-blur-md px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 border border-white flex items-center justify-center overflow-hidden">
-            <img 
-              src="/src/assets/images/duskvald_logo_v1_1778137857042.png" 
-              alt="Duskvald Logo" 
+            <img
+              src={logo1}
+              alt="Duskvald Logo"
               className="w-full h-full object-cover invert"
               referrerPolicy="no-referrer"
             />
@@ -148,7 +152,7 @@ export default function App() {
               <p>Type: {BANNERS[currentIdx].title}</p>
             </div>
           </div>
-          
+
           <div className="absolute bottom-12 right-12 flex gap-4">
             <button className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-white/5 hover:bg-white/10 px-4 py-2 border border-white/10 transition-all backdrop-blur-sm">
               <Download size={14} />
@@ -192,23 +196,23 @@ export default function App() {
 
             <div className="space-y-8">
               <div className="aspect-square bg-zinc-900 border border-horror-border relative overflow-hidden group">
-                <img 
-                  src={BANNERS[1].url} 
-                  alt="Duskvald Identity" 
+                <img
+                  src={BANNERS[1].url}
+                  alt="Duskvald Identity"
                   className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-1000"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="p-8 border border-white/20 backdrop-blur-sm bg-black/40 text-center space-y-2">
-                      <p className="font-mono text-[10px] uppercase tracking-[0.5em] text-white">Signature Aesthetic</p>
-                      <h4 className="text-xl uppercase font-bold tracking-tight">Analog Digital Dread</h4>
-                   </div>
+                  <div className="p-8 border border-white/20 backdrop-blur-sm bg-black/40 text-center space-y-2">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.5em] text-white">Signature Aesthetic</p>
+                    <h4 className="text-xl uppercase font-bold tracking-tight">Analog Digital Dread</h4>
+                  </div>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4 pt-4">
                 {['Muted Palettes', 'Minimalism', 'Shadow Play', 'Analog Horror', 'Ambiguity'].map((tag) => (
-                   <span key={tag} className="px-3 py-1 text-[10px] uppercase border border-zinc-800 text-zinc-500 tracking-widest">{tag}</span>
+                  <span key={tag} className="px-3 py-1 text-[10px] uppercase border border-zinc-800 text-zinc-500 tracking-widest">{tag}</span>
                 ))}
               </div>
             </div>

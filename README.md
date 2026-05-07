@@ -2,7 +2,7 @@
 
 A digital horror brand showcase built with React, Vite, and Tailwind CSS.
 
-🌐 **Live site**: https://faheem-riaz.github.io/duskvlad/
+🌐 **Live site**: https://faheem.riaz.kn.github.io/duskvlad/
 
 ## Run Locally
 

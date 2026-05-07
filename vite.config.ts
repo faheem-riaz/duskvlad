@@ -1,12 +1,15 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({mode}) => {
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
+  const repoName = env.GITHUB_REPOSITORY?.split('/')[1];
+  const basePath = env.VITE_BASE_PATH || (repoName ? `/${repoName}/` : '/');
+
   return {
-    base: '/duskvlad/',
+    base: basePath,
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
