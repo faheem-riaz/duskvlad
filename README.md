@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Duskvald Brand Hub
 
-# Run and deploy your AI Studio app
+A digital horror brand showcase built with React, Vite, and Tailwind CSS.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/97b411c3-32e9-4284-9fdc-db9ca6cfc0dd
+🌐 **Live site**: https://faheem-riaz.github.io/duskvlad/
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the app:
    `npm run dev`
+
+## Build
+
+`npm run build`
+
+## Deploy
+
+Deployments are automated via GitHub Actions to GitHub Pages on every push to `main`.
